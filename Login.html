@@ -5,15 +5,15 @@
     </head>
     <body>
         <h1>-:Login Form:-</h1>
-        <form>
+        <form action="index.html" method="get">
             <h2>Login</h2>
                 <b>Username</b>
-                <input type="text"placeholder="Enter username" >
+                <input type="text"placeholder="Enter username" required>
                 <br>
                 <b>Password </b>    
-                <input type="password"placeholder="Enter password" >
+                <input class="io" type="password"placeholder="Enter password" required>
                 <br>
-                <a href="index.html" class="buton">Login</a>
+                <button class="buton">Login</button>
                
                 
                 <br>
@@ -26,17 +26,20 @@
         input
         {
             height: 50px;
-            width: 200px;
-            font-size: 20px;
+            width: 300px;
+            font-size: 25px;
+            border-radius: 25px
         }
-        
+        .io{
+            margin-left: 8px;
+        }
         .buton
         {
             padding: 10px 70px;
             background-color: rgb(209, 255, 163);
             font-size: 30px;
             text-decoration: none;
-        
+            margin-top: 20px;
             border-radius: 25px;
             cursor:pointer;
         }
