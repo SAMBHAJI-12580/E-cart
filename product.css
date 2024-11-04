@@ -1,0 +1,102 @@
+.labelBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.home-button {
+
+    position: absolute;
+    top: 28px;
+    left: 30px;
+
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    top: -40px;
+    font-size: 20px;
+}
+
+.product {
+    border: 2px solid blue;
+    padding: 5px;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+
+
+input {
+
+    margin-top: 20px;
+    background: transparent;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 25px;
+}
+
+.btn {
+    padding: 10px 35px;
+    margin-top: 50px;
+    background: radial-gradient(rgb(191, 240, 255),rgb(192, 196, 255));
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:hover{
+    font-weight: bold;
+}
+textarea {
+    height: 200px;
+    width: 600px;
+    border-radius: 10px;
+    font-size: 20px;
+    background: rgb(214, 213, 213);
+}
+
+a {
+    font-size: 20px;
+}
+
+label {
+    display: contents;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 30px;
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%;
+    }
+}
+
+@media (max-width: 100%) {
+    body {
+        width: calc(100%);
+    }
+
+}

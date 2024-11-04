@@ -1,41 +1,95 @@
 <html>
-    <head>
-        <title>
-            All Phones
-        </title>
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
-        <h1>-:Mobiles:-</h1>
-        <a href="index.html" class="home-button">Home</a>
-        <div class="products-container">
-            <div class="product">
-                <a href="iphone 15 pro.html"><img
-                        src="https://images.macrumors.com/t/oiWkxB5isnYn8BFbcgKsnDIUOdI=/800x0/smart/article-new/2023/09/iPhone-15-Pro-Lineup-Feature.jpg?lossy"></a>
-                <div class="product-info">
-                    <h2>iPhone 15 Pro</h2>
-                    <p><b>Description: Apple iPhone 15 Pro available in multiple color</b></p>
-                    <p><b>Price :</b> ₹1,20,000.00 (Price Includes GST)</p>
-                    <p><b>Availability :</b> In Stock</p>
-                    <br>
-                    <a href="iphone 15 pro.html"><button class="buy">Buy Now</button></a>
-                </div>
+
+<head>
+    <title>
+        All Phones
+    </title>
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+        .home-button {
+
+            position: absolute;
+            top: 35px;
+            left: 2%;
+
+        }
+
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            position: relative;
+            top: -40px;
+
+        }
+
+        .product {
+            border: 2px solid blue;
+            padding: 5px;
+            width: calc(33.33% - 20px);
+            box-sizing: border-box;
+        }
+
+        .product:hover {
+            background-color: white;
+
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-info {
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>-:Mobiles:-</h1>
+    <a href="index.html" class="home-button">Home</a>
+    <div class="products-container">
+        <div class="product">
+            <a href="iphone 15 pro.html"><img
+                    src="https://images.macrumors.com/t/oiWkxB5isnYn8BFbcgKsnDIUOdI=/800x0/smart/article-new/2023/09/iPhone-15-Pro-Lineup-Feature.jpg?lossy"></a>
+            <div class="product-info">
+                <h2>iPhone 15 Pro</h2>
+                <p><b>Description: Apple iPhone 15 Pro available in multiple color</b></p>
+                <p><b>Price :</b> ₹1,20,000.00 (Price Includes GST)</p>
+                <p><b>Availability :</b> In Stock</p>
+                <br>
+                <a href="iphone 15 pro.html"><button class="buy">Buy Now</button></a>
             </div>
-            <div class="product">
-                <a href="iPhone 12.html"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuBduD-V8ButIrdX50blx1pG9yNdg5TI0vYQ&s"
-                        width="100%"></a>
-                <div class="product-info">
-                    <h2>iPhone 12 </h2>
-                    <p><b>Description: Apple iPhone 12 (Black, 64 GB)</b></p>
-                    <p><b>Price :</b> ₹39,999.00 (Price Includes GST)</p>
-                    <p><b>Availability :</b> In Stock</p>
-                    <a href="iPhone 12.html"><button class="buy">Buy Now</button></a>
-                </div>
+        </div>
+        <div class="product">
+            <a href="iPhone 12.html"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuBduD-V8ButIrdX50blx1pG9yNdg5TI0vYQ&s"
+                    width="100%"></a>
+            <div class="product-info">
+                <h2>iPhone 12 </h2>
+                <p><b>Description: Apple iPhone 12 (Black, 64 GB)</b></p>
+                <p><b>Price :</b> ₹39,999.00 (Price Includes GST)</p>
+                <p><b>Availability :</b> In Stock</p>
+                <a href="iPhone 12.html"><button class="buy">Buy Now</button></a>
             </div>
-            <div class="product">
-                <a href="iPhone 11.html"><img
-                        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/
+        </div>
+        <div class="product">
+            <a href="iPhone 11.html"><img
+                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/
                         2wCEAAkGBxISEhUSEhIVFRUVFRUXGBcWFRUXFRcVGBUXFxYVGBcYHSggGRolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGi0lHSUwLS0tLS0tLS0tLS0tLS8tKy0tLS0tLS0tLS0tLy0tLS0tLS0tLS8tLS0tLS0tLS8tLf/
                         AABEIAKgBLAMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQIDBAUGBwj/xABCEAACAQIDBQQHBQYGAgMBAAABAgADEQQhMQUSQVFhBnGBkQcTIjKhscFCUpLR8BQjYnKC4RUzU6LC8WPSsrPiQ/
                         /EABoBAAIDAQEAAAAAAAAAAAAAAAABAgMEBQb/xAAyEQACAgEBBQUHAwUAAAAAAAAAAQIRAzEEBRIhQRNhgcHhFCJCUXGh8BUjojNDUmKR/
@@ -48,64 +102,16 @@
                         I6Sv2lgGpt6yn35QQTobBkfE49CnKuVlrsTb4b2HyPWaEEEXv48R3wQTrozsUr8D58D+Rmc7fYF62Hemn/APWlWo56A1Kf7s93rFQd
                         zGCCNgeZNl0Szmm3sWvvbwtu2ve4PUWtrePYLaL4eqmJom1Sk1xyYaMjc1IuCORMEE0fAvEq6nqXYu0Fr0KdZdHRHW+u66h
                         0v1swv4yeBBBM5YC0VaCCAwiIVoIIAFaC0EEAG6pb7IBz4m2XON71T7oGXO+fKHBEAjeq8h425ZaHnaK36mfsDzEEEAAXf7o8xy7+ccQm2YsYIIAf/9k="
-                        width="100%" height="100%"></a>
-                <div class="product-info">
-                    <h2>iPhone 11</h2>
-                    <p><b>Description: Apple iPhone 11 128 GB, Black (without Earpods and Adapter)</b></p>
-                    <p><b>Price :</b> ₹47,999.00 (Price Includes GST)</p>
-                    <p><b>Availability:</b> In Stock</p>
-                    <a href="iPhone 11.html"><button class="buy">Buy Now</button></a>
-                </div>
+                    width="100%" height="100%"></a>
+            <div class="product-info">
+                <h2>iPhone 11</h2>
+                <p><b>Description: Apple iPhone 11 128 GB, Black (without Earpods and Adapter)</b></p>
+                <p><b>Price :</b> ₹47,999.00 (Price Includes GST)</p>
+                <p><b>Availability:</b> In Stock</p>
+                <a href="iPhone 11.html"><button class="buy">Buy Now</button></a>
             </div>
         </div>
-    </body>
-    <style>
-     
-   
-        .home-button {
+    </div>
+</body>
 
-            position: absolute;
-            top: 35px;
-            left: 2%;
-           
-        }
-        .products-container {
-            display: flex; 
-            flex-wrap: wrap; 
-            gap: 20px; 
-            position: relative;
-            top: -40px;
-
-        }
-        .product {
-            border: 2px solid blue;
-            padding: 5px;
-            width: calc(33.33% - 20px); 
-            box-sizing: border-box; 
-        }
-        .product:hover {
-            background-color: white;
-    
-        }    
-        .product img {
-            max-width: 100%;
-            height: auto;
-        }
-        .product-info {
-            margin-top: 10px;
-        }
-        @media (max-width: 768px) {
-            .product {
-                width: calc(50% - 20px);
-            }
-        }
-    
-        @media (max-width: 480px) {
-            .product {
-                width: 100%;
-            }
-        }
-     
-     
-    </style>
 </html>
