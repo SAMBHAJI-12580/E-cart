@@ -1,5 +1,5 @@
 body {
-    background:linear-gradient( rgb(254, 255, 214),rgb(255, 203, 203))
+    background:rgb(166, 172, 172)
 }
 a {
     text-decoration: none;
@@ -13,13 +13,13 @@ h1
     background-size: 100%;
     color: rgb(254, 254, 255);
     position:center;
-    height: 100px; 
+    height: 80px; 
 }
 .home-button {
     font-size: 180%;
     background-color: #007bff;
     color: azure;
-    padding: 10px 20px;
+    padding: 5px 20px;
     text-decoration: none;
     border-radius: 25px;
 }
