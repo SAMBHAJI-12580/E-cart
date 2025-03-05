@@ -16,7 +16,9 @@ h1
     height: 80px; 
 }
 .home-button {
- 
+    position: absolute;
+    top: 25px;
+    left: 2%;
     font-size: 180%;
     background-color: #007bff;
     color: azure;
