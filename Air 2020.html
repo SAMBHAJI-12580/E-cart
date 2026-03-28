@@ -1,73 +1,319 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>
-        MacBook Air 2020
-    </title>
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="product.css">
+    <title>MacBook Air 2020</title>
+   e>
+    >
+    >
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1f2937);
+            color: #f9fafb;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 1.5rem 1rem 0.5rem;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: #e5e7eb;
+            letter-spacing: 0.08em;
+        }
+
+        .home-button {
+            display: inline-block;
+            margin: 0 0 1.5rem 1.5rem;
+            padding: 0.6rem 1.4rem;
+            border-radius: 999px;
+            background: #111827;
+            color: #e5e7eb;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border: 1px solid #374151;
+            transition: all 0.25s ease;
+        }
+
+        .home-button:hover {
+            background: #2563eb;
+            border-color: #2563eb;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        .products-container {
+            max-width: 1100px;
+            margin: 0 auto 2.5rem;
+            padding: 0 1.5rem 2rem;
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+            gap: 2rem;
+        }
+
+        .product {
+            background: rgba(15, 23, 42, 0.9);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+        }
+
+        .product img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            max-height: 320px;
+        }
+
+        .product-info {
+            padding: 1.5rem 1.75rem 1.75rem;
+        }
+
+        .product-info h2 {
+            margin: 0 0 0.8rem;
+            font-size: 1.4rem;
+            color: #f9fafb;
+        }
+
+        .product-info p {
+            margin: 0.2rem 0;
+            line-height: 1.5;
+            color: #d1d5db;
+            font-size: 0.95rem;
+        }
+
+        .product-info .price {
+            font-size: 1.2rem;
+            color: #22c55e;
+            margin-top: 0.8rem;
+            font-weight: 600;
+        }
+
+        .product-info .availability {
+            margin-top: 0.2rem;
+            color: #a3e635;
+            font-weight: 500;
+        }
+
+        .products {
+            background: rgba(15, 23, 42, 0.9);
+            border-radius: 20px;
+            padding: 1.75rem 1.75rem 2rem;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+        }
+
+        .products h3 {
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+            color: #e5e7eb;
+        }
+
+        .labelBox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.9rem;
+            gap: 0.5rem;
+        }
+
+        .labelBox pre {
+            margin: 0;
+            font-family: inherit;
+            font-size: 0.96rem;
+            color: #9ca3af;
+            min-width: 140px;
+        }
+
+        .labelBox input[type="text"],
+        .labelBox input[type="email"] {
+            flex: 1;
+            padding: 0.55rem 0.7rem;
+            border-radius: 10px;
+            border: 1px solid #4b5563;
+            background: #020617;
+            color: #e5e7eb;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .labelBox input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.5);
+            background: #020617;
+        }
+
+        .color-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .color-group pre {
+            margin: 0;
+            font-family: inherit;
+            font-size: 0.96rem;
+            color: #9ca3af;
+            min-width: 140px;
+        }
+
+        .color-options label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            background: #020617;
+            border: 1px solid #4b5563;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #e5e7eb;
+        }
+
+        .color-options input {
+            accent-color: #2563eb;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 90px;
+            margin-top: 0.3rem;
+            padding: 0.7rem;
+            border-radius: 12px;
+            border: 1px solid #4b5563;
+            background: #020617;
+            color: #e5e7eb;
+            resize: vertical;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        textarea:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1.4rem;
+            padding: 0.8rem 2.4rem;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
+            color: #f9fafb;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.5);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.05);
+            box-shadow: 0 18px 40px rgba(59, 130, 246, 0.8);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.6);
+        }
+
+        .note {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 800px) {
+            .products-container {
+                grid-template-columns: 1fr;
+                margin-top: 0.5rem;
+            }
+
+            .home-button {
+                margin-left: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <h1>-:MacBook Air 2020:-</h1>
-    <a href="all laptops.html" class="home-button">Back</a>
+    <h1>-: MacBook Air 2020 :-</h1>
+    <a href="all laptops.html" class="home-button">← Back to all laptops</a>
+
     <div class="products-container">
+        <!-- Product card -->
         <div class="product">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5AFwJwvNGJdHaIJkltmSbJk-YoFcn3tGgFQ&s"
-                width="100%">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5AFwJwvNGJdHaIJkltmSbJk-YoFcn3tGgFQ&s" alt="Apple MacBook Air 2020">
             <div class="product-info">
-                <br>
-                <h2>Apple MacBook Air 2020</h2>
-                <p><b>Description: Apple MacBook Air 2020 (M1 Chipset, 13.3 Inch Display, 8GB RAM, 256GB ROM, macOS Big
-                        Sur, Space Grey,Metal Body)</b></p>
-                <p><b>Price :</b> ₹72,590.00 (Price Includes GST)</p>
-                <p><b>Availability:</b> In Stock</p>
+                <h2>Apple MacBook Air 2020 (M1)</h2>
+                <p>Powerful M1 chipset, 13.3‑inch Retina display, 8GB unified memory, 256GB SSD, macOS Big Sur, Space Grey, premium metal unibody design.</p>
+                <p class="price">₹72,590.00</p>
+                <p>Price includes GST.</p>
+                <p class="availability">In stock · Free delivery</p>
             </div>
         </div>
 
-
-
+        <!-- Checkout / details form -->
         <div class="products">
+            <h3>Enter your details</h3>
+
             <div class="labelBox">
-                <pre>First Name      :</pre>
-                <input type="text" placeholder="Enter firstname">
+                <pre>First Name:</pre>
+                <input type="text" placeholder="Enter first name">
             </div>
+
             <div class="labelBox">
-                <pre>Last Name       :</pre>
-                <input type="text" placeholder="Enter lastname">
+                <pre>Last Name:</pre>
+                <input type="text" placeholder="Enter last name">
             </div>
+
             <div class="labelBox">
-                <pre>Phone Number 1  :</pre>
-                <input type="text" placeholder="number">
+                <pre>Phone Number 1:</pre>
+                <input type="text" placeholder="Primary number">
             </div>
+
             <div class="labelBox">
-                <pre>Phone Number 2  :</pre>
-                <input type="text" placeholder="number">
+                <pre>Phone Number 2:</pre>
+                <input type="text" placeholder="Alternate number (optional)">
             </div>
+
             <div class="labelBox">
-                <pre>e-mail Address  :</pre>
-                <input type="e-mail" placeholder="e-mail">
+                <pre>E-mail Address:</pre>
+                <input type="email" placeholder="name@example.com">
             </div>
-            <div class="labelBox">
-                <pre>Choose color    :</pre>
-                <label><input type="radio" name="color">
-                    <p> Black</p>
-                </label>
-                <label><input type="radio" name="color">
-                    <p>Blue</p>
-                </label>
-                <label><input type="radio" name="color">
-                    <p>White</p>
-                </label>
+
+            <div class="color-group">
+                <pre>Choose color:</pre>
+                <div class="color-options">
+                    abel>
+                        <input type="radio" name="color">
+                        <span>Space Grey</span>
+                    </label>
+                    abel>
+                        <input type="radio" name="color">
+                        <span>Silver</span>
+                    </label>
+                    abel>
+                        <input type="radio" name="color">
+                        <span>Gold</span>
+                    </label>
+                </div>
             </div>
-            <pre>Delivery Address:</pre>
-            <textarea></textarea>
-            <br>
-            <br>
+
+            <pre style="font-family: inherit; color:#9ca3af; margin:0 0 0.3rem;">Delivery Address:</pre>
+            <textarea placeholder="House / Flat no., Street, Area, City, Pincode"></textarea>
+
             <a href="11.html" class="btn">Place Order</a>
+            <div class="note">By placing the order, you agree to our terms & conditions.</div>
         </div>
-    </div>
     </div>
 </body>
-
 </html>
